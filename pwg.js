@@ -1,14 +1,13 @@
 const generator = () => {
-  let password = [];
+  let password = '';
   const use = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@!$#%&*^?</>|+()§';
 
   for (let i=0; i<12; i++)
   password += use.charAt(Math.floor(Math.random() * use.length));
 
-   let newPassword = Array.from(password);
-   let list = newPassword;
-   let newlist = list.filter((x, i, a) => a.indexOf(x) == i)
-   let savePassword = newlist.join('');
+   const newPassword = Array.from(password);
+   const uniqPassword = newPassword.filter((x, i, a) => a.indexOf(x) == i)
+   const savePassword = uniqPassword.join('');
 
   return savePassword;
 }
