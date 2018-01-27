@@ -6,9 +6,9 @@ const generator = () => {
   password += use.charAt(Math.floor(Math.random() * use.length));
 
    let newPassword = Array.from(password);
-   list = newPassword;
-   list = list.filter((x, i, a) => a.indexOf(x) == i)
-   let savePassword = list.join('');
+   let list = newPassword;
+   let newlist = list.filter((x, i, a) => a.indexOf(x) == i)
+   let savePassword = newlist.join('');
 
   return savePassword;
 }
