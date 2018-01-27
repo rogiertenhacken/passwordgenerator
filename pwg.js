@@ -8,7 +8,7 @@ const generator = () => {
    let newPassword = Array.from(password);
    list = newPassword;
    list = list.filter((x, i, a) => a.indexOf(x) == i)
-   savePassword = list.join('');
+   let savePassword = list.join('');
 
   return savePassword;
 }
